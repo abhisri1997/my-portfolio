@@ -24,7 +24,7 @@ export const fetchRepo = async () => {
       "X-RapidAPI-Key": process.env.REACT_APP_APIKey,
     },
     params: {
-      user: "dev-elixir",
+      user: "abhisri1997",
       repo: 6,
     },
   });
