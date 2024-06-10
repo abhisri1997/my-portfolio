@@ -5,12 +5,12 @@ import "./footer.css";
 
 const Footer = () => {
   const [year, setYear] = useState("");
+
   useEffect(() => {
-    const currentYear = new Date().getFullYear();
+    const currentYear = new Date().getFullYear().toString();
     setYear(currentYear);
-    console.log(year);
-    // eslint-disable-next-line
   }, []);
+
   return (
     <footer className="no-container">
       <div className="main-footer">

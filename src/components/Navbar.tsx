@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import nav_menu, { social_icons } from "./site-data";
 import { AiOutlineMenu } from "react-icons/ai";
 import "./navbar.css";
@@ -8,16 +8,14 @@ const Navbar = () => {
   const [isToggled, setIsToggled] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", stickyNavbar.bind(null, 1)); // using bind as direct paramter was not accessible
-    // window.addEventListener("resize", stickyNavbar(2));
+    window.addEventListener("scroll", stickyNavbar.bind(null, 1));
 
     return () => {
       window.removeEventListener("scroll", stickyNavbar.bind(null, 1));
-      // window.removeEventListener("resize", stickyNavbar(2));
     };
   }, []);
 
-  const stickyNavbar = (id) => {
+  const stickyNavbar = (id: number) => {
     if (window !== undefined && id === 1) {
       let windowHeight = window.scrollY;
       windowHeight > 150 ? setStickyClass("sticky") : setStickyClass("");
