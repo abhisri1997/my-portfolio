@@ -194,7 +194,7 @@ ul.my-projects {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 3rem;
     padding: 2% 0;
     text-align: left;
@@ -211,6 +211,7 @@ ul.my-projects {
     line-height: 1.5;
     letter-spacing: 2px;
     margin-bottom: 0.5rem;
+    margin-top: 1rem;
   }
 
   .project-showcase {
