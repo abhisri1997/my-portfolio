@@ -87,3 +87,48 @@ section.no-container.my-achievement {
     flex-direction: column;
   }
 }
+
+.github-skills {
+  margin-top: 2rem;
+}
+
+.github-lang-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.github-lang-badge {
+  background-color: #795548;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.loading-text {
+  text-align: center;
+  color: #98a6ad;
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+.error-text {
+  text-align: center;
+  color: #e74c3c;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.project-lang {
+  display: inline-block;
+  background-color: #eaf2fa;
+  color: #795548;
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
