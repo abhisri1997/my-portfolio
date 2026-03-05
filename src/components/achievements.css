@@ -30,7 +30,16 @@ section.no-container.my-achievement {
   flex-direction: column;
 }
 
+.achievement-heading,
 .skills-heading {
+  text-transform: uppercase;
+  font-family: montserrat, sans-serif;
+  font-size: clamp(1rem, calc(0.8rem + 1vw), 1.3rem);
+  color: #98a6ad;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-align: center;
   margin: 2rem 0;
 }
 
@@ -59,11 +68,8 @@ section.no-container.my-achievement {
 
   .achievement-heading,
   .skills-heading {
-    text-align: center;
-    margin-bottom: 5%;
-    font-weight: 400;
-    font-size: 1.2rem;
     margin: 0;
+    margin-bottom: 5%;
   }
 
   .my-skills {
