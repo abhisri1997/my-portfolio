@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import nav_menu, { social_icons } from "./site-data";
 import { AiOutlineMenu } from "react-icons/ai";
 import "./navbar.css";
@@ -7,45 +7,49 @@ const Navbar = () => {
   const [stickyClass, setStickyClass] = useState("");
   const [isToggled, setIsToggled] = useState(false);
 
-  useEffect(() => {
-    window.addEventListener("scroll", stickyNavbar.bind(null, 1));
-
-    return () => {
-      window.removeEventListener("scroll", stickyNavbar.bind(null, 1));
-    };
+  const handleScroll = useCallback(() => {
+    if (window !== undefined) {
+      const windowHeight = window.scrollY;
+      setStickyClass(windowHeight > 150 ? "sticky" : "");
+    }
   }, []);
 
-  const stickyNavbar = (id: number) => {
-    if (window !== undefined && id === 1) {
-      let windowHeight = window.scrollY;
-      windowHeight > 150 ? setStickyClass("sticky") : setStickyClass("");
-    } else {
-      if (window.innerWidth >= 900) {
-        setIsToggled(false);
-      }
+  const handleResize = useCallback(() => {
+    if (window.innerWidth >= 900) {
+      setIsToggled(false);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [handleScroll, handleResize]);
 
   return (
     <div className={`no-container ${stickyClass}`}>
-      <nav className="my-container navbar">
-        <div className="navbar-logo">
-          <div className="logo">
-            <a href={window.location.origin} className="logo-link">
+      <nav className='my-container navbar'>
+        <div className='navbar-logo'>
+          <div className='logo'>
+            <a href={window.location.origin} className='logo-link'>
               AK
             </a>
           </div>
           <AiOutlineMenu
-            className="toggle-bar icons"
+            className='toggle-bar icons'
             onClick={() => setIsToggled(!isToggled)}
           />
         </div>
-        <div className="navbar-links">
+        <div className='navbar-links'>
           <ul className={isToggled ? "nav-menu dropdown" : "nav-menu"}>
             {nav_menu.map((item) => {
               const { id, text, url } = item;
               return (
-                <li key={id} className="nav-link">
+                <li key={id} className='nav-link'>
                   <a href={url} onClick={() => setIsToggled(false)}>
                     {text}
                   </a>
@@ -53,12 +57,12 @@ const Navbar = () => {
               );
             })}
           </ul>
-          <ul className="social-icons">
+          <ul className='social-icons'>
             {social_icons.map((platform) => {
               const { id, type, library, url } = platform;
               return (
                 <li key={id} className={`${type}`}>
-                  <a href={url} rel="noreferrer noopener" target="_blank">
+                  <a href={url} rel='noreferrer noopener' target='_blank'>
                     {library}
                   </a>
                 </li>
@@ -70,4 +74,5 @@ const Navbar = () => {
     </div>
   );
 };
+
 export default Navbar;

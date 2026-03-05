@@ -12,23 +12,23 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="no-container">
-      <div className="main-footer">
-        <ul className="social-icons">
+    <footer className='no-container'>
+      <div className='main-footer'>
+        <ul className='social-icons'>
           {social_icons.map((platform) => {
             const { id, type, library, url } = platform;
             return (
               <li key={id} className={`icon ${type}`}>
-                <a href={url} rel="noreferrer noopener" target="_blank">
+                <a href={url} rel='noreferrer noopener' target='_blank'>
                   {library}
                 </a>
               </li>
             );
           })}
         </ul>
-        <p className="footer-text">
+        <p className='footer-text'>
           <span>
-            <FaCopyright className="copyright-icon" />
+            <FaCopyright className='copyright-icon' />
             &nbsp;&nbsp;{year}&nbsp;Abhinav Kumar. All Rights Reserved
           </span>
         </p>
