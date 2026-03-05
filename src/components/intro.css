@@ -194,9 +194,15 @@ ul.my-projects {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     justify-content: center;
-    align-items: start;
+    align-items: center;
+    gap: 3rem;
     padding: 2% 0;
     text-align: left;
+  }
+
+  .card {
+    max-width: 320px;
+    margin: 0 auto;
   }
 
   .about-me h1 {
