@@ -1,0 +1,160 @@
+.project-showcase {
+  margin: 3rem 0 1rem;
+  text-transform: uppercase;
+  font-family: montserrat, sans-serif;
+  font-size: clamp(1.2rem, calc(1rem + 1vw), 1.5rem);
+  color: #98a6ad;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.projects-section {
+  padding: 1rem 0 4rem;
+}
+
+/* Side-by-side layout for Projects and Contributions */
+.repos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.repos-column {
+  min-width: 0;
+}
+
+.repos-column .project-showcase {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/* Repo Card Styles */
+.repo-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.repo-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.repo-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  background: #fafaf5;
+}
+
+.repo-card-icon {
+  color: #5a7;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.repo-card-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.repo-card-title:hover {
+  color: #00e;
+}
+
+.repo-card-body {
+  padding: 0.75rem 1rem;
+  flex: 1;
+}
+
+.repo-card-desc {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.repo-card-footer {
+  padding: 0.5rem 1rem 0.75rem;
+  border-top: 1px solid #eee;
+}
+
+.repo-card-lang {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #555;
+  background: #eee;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+ul.my-projects {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.project-name {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.project-link {
+  text-decoration: none;
+}
+
+.project-link:hover,
+.project-link:active,
+.project-link:link,
+.project-link:visited {
+  color: #00e;
+}
+
+/* Desktop Design */
+@media screen and (min-width: 900px) {
+  .project-showcase {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .repos-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  ul.my-projects {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 0;
+  }
+
+  .project-name {
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.5rem, calc(1rem - 10px), 1.8rem);
+  }
+
+  .project-desc {
+    font-size: clamp(0.8rem, calc(2vw - 2rem), 1rem);
+  }
+}
