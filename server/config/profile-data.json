@@ -1,0 +1,38 @@
+{
+  "name": "Abhinav Kumar",
+  "title": "Full Stack Developer",
+  "company": {
+    "name": "Tata Consultancy Services Pvt LTD",
+    "role": "Assistant System Engineer",
+    "description": "Working as an Assistant System Engineer with focus on full stack development, automation, and scripting solutions."
+  },
+  "education": {
+    "degree": "Bachelor's in ECE (Electronics and Communication Engineering)",
+    "university": "AKTU"
+  },
+  "achievements": [
+    {
+      "id": 1,
+      "text": "A certain task would have taken a total of 7-10 days of work but with the help of scripting I had automated all the task from extraction of data to validation in within 3 days."
+    },
+    {
+      "id": 2,
+      "text": "Created an API with the help of Node JS, Express, Cheerio and Puppeteer and implemented it with Microsoft Flow to generate an alert in our Teams group."
+    },
+    {
+      "id": 3,
+      "text": "Also created several automation scripts to help my team deliver the tasks on time."
+    }
+  ],
+  "skills": {
+    "languages": ["JavaScript", "HTML5", "CSS3", "TypeScript"],
+    "frameworks": ["ReactJS", "NodeJS", "ExpressJS", "jQuery", "KnockOutJS"],
+    "automation": ["Shell Scripting", "Puppeteer", "Cheerio"],
+    "databases": ["PostgreSQL", "MySQL"]
+  },
+  "interests": [
+    "Competitive Programming",
+    "Full Stack Development",
+    "Automation"
+  ]
+}
