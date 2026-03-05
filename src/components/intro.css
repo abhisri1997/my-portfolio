@@ -230,7 +230,7 @@ ul.my-projects {
 
   .project-name {
     margin-bottom: 0.5rem;
-    font-size: clamp(1rem, calc(1rem -10px), 1.2rem);
+    font-size: clamp(1.5rem, calc(1rem - 10px), 1.8rem);
   }
 
   .project-desc {
