@@ -119,38 +119,36 @@ const Intro = () => {
               </p>
             </>
           )}
-
-          {loading && <p className='loading-text'>Loading projects...</p>}
-          {error && <p className='error-text'>{error}</p>}
-
-          {/* Side-by-side Projects & Contributions */}
-          {reposData && (
-            <div className='repos-grid' id='projects'>
-              <div className='repos-column'>
-                <p className='project-showcase'>My Projects</p>
-                {reposData.projects.length > 0 ? (
-                  <RepoList repos={reposData.projects} icon='project' />
-                ) : (
-                  <p className='loading-text'>No projects found.</p>
-                )}
-              </div>
-              <div className='repos-column'>
-                <p className='project-showcase' id='contributions'>
-                  Open Source Contributions
-                </p>
-                {reposData.contributions.length > 0 ? (
-                  <RepoList
-                    repos={reposData.contributions}
-                    icon='contribution'
-                  />
-                ) : (
-                  <p className='loading-text'>No contributions found.</p>
-                )}
-              </div>
-            </div>
-          )}
         </div>
       </main>
+
+      <section className='my-container projects-section'>
+        {loading && <p className='loading-text'>Loading projects...</p>}
+        {error && <p className='error-text'>{error}</p>}
+
+        {reposData && (
+          <div className='repos-grid' id='projects'>
+            <div className='repos-column'>
+              <h2 className='project-showcase'>My Projects</h2>
+              {reposData.projects.length > 0 ? (
+                <RepoList repos={reposData.projects} icon='project' />
+              ) : (
+                <p className='loading-text'>No projects found.</p>
+              )}
+            </div>
+            <div className='repos-column'>
+              <h2 className='project-showcase' id='contributions'>
+                Open Source Contributions
+              </h2>
+              {reposData.contributions.length > 0 ? (
+                <RepoList repos={reposData.contributions} icon='contribution' />
+              ) : (
+                <p className='loading-text'>No contributions found.</p>
+              )}
+            </div>
+          </div>
+        )}
+      </section>
     </header>
   );
 };

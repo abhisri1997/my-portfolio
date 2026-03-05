@@ -47,19 +47,23 @@ header.no-container {
   margin: 3rem 0 1rem;
   text-transform: uppercase;
   font-family: montserrat, sans-serif;
-  font-size: clamp(1.2rem, calc(5vw - 10rem), 1.5rem);
+  font-size: clamp(1.2rem, calc(1rem + 1vw), 1.5rem);
   color: #98a6ad;
   line-height: 1.5;
   letter-spacing: 2px;
   font-weight: 500;
+  text-align: center;
+}
+
+.projects-section {
+  padding: 1rem 0 4rem;
 }
 
 /* Side-by-side layout for Projects and Contributions */
 .repos-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
-  margin-top: 1rem;
+  gap: 3rem;
 }
 
 .repos-column {
@@ -68,12 +72,7 @@ header.no-container {
 
 .repos-column .project-showcase {
   margin-top: 0;
-}
-
-.repos-column ul.my-projects {
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-left: 0;
+  margin-bottom: 2rem;
 }
 
 /* Repo Card Styles */
@@ -155,8 +154,10 @@ header.no-container {
 ul.my-projects {
   list-style: none;
   display: grid;
-  grid-template-columns: auto auto;
-  margin-left: 2%;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
 }
 
 .project-name {
@@ -208,19 +209,18 @@ ul.my-projects {
 
   .project-showcase {
     margin: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
   }
 
   .repos-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   ul.my-projects {
-    list-style: none;
-    display: grid;
-    grid-template-columns: auto auto;
-    margin-left: 2%;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 0;
   }
 
   .about-me {

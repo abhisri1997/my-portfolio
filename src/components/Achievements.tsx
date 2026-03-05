@@ -83,20 +83,26 @@ const Achievements = () => {
               );
             })}
           </div>
-          {gitHubLanguages.length > 0 && (
-            <div className='github-skills'>
-              <h4 className='skills-heading'>GitHub Languages</h4>
-              <div className='github-lang-list'>
-                {gitHubLanguages.map((lang) => (
-                  <span key={lang} className='github-lang-badge'>
-                    {lang}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
+
+      {gitHubLanguages.length > 0 && (
+        <div className='my-container github-skills-container'>
+          <h4
+            className='skills-heading text-center'
+            style={{ textAlign: "center" }}
+          >
+            GitHub Languages
+          </h4>
+          <div className='github-lang-list'>
+            {gitHubLanguages.map((lang) => (
+              <span key={lang} className='github-lang-badge'>
+                {lang}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 };
